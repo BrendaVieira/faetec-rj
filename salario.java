@@ -1,11 +1,26 @@
-/*
+/* Crie um programa para cálculo do salário líquido em que três vaçores devem ser informados pelo
+ * usuário na linha de comando: a quantidade de horas trabalhadas, o salário hora e o número de
+ * dependentes. O programa deve mostrar na tela as informações contidas no lado esquerdo da tabela
+ * seguinte. Os cálculos correspondentes aparecem no lado direito.
  * 
+ * INFORMAÇÃO			CÁLCULO
+ * Salário Bruto 		Horas trabalhadas * Salário Hora + (50 * Nº Dependentes)
  * 
+ * Desconto INSS		Se Salário Bruto <= 1000 INSS = Salário Bruto * 8.5/100
+ * 						Se Salário Bruto > 1000 INSS = Salário Bruto * 9/100
  * 
+ * Desconto IR			Se Salário Bruto <= 500 IR = 0
+ * 						Se Salário Bruto > 500 e <= 1000 IR = Salário Bruto * 5/100
+ * 						Se Salário Bruto > 1000 IR = Salário Bruto * 7/100
+ * 
+ * Salário Líquido		Salário Bruto - INSS - IR
  * 
 */
 
 //import javax.swing.JOptionPane;
+
+package javinha;
+
 import java.io.*;
 
 public class salario{
@@ -30,22 +45,22 @@ public class salario{
 			System.out.println("Entre com a quantidade de horas trabalhadas: ");
 			dado = new DataInputStream(System.in);
 			s = dado.readLine();
-			quantidadeHoras=Float.parseFloat(s);
+			quantidadeHoras=Integer.parseInt(s);
 			
 			System.out.println("Entre com o numero de dependentes: ");
 			dado = new DataInputStream(System.in);
 			s = dado.readLine();
-			dependentes=Float.parseFloat(s);
+			dependentes=Integer.parseInt(s);
 			
 			//calculo e resultado
             salarioBruto = (quantidadeHoras * salarioHora) + (50 * dependentes);
 			
             //desconto inss
 			if(salarioBruto<=1000){
-                inss = (salarioBruto * 0.085);     // 8.5/100
+                inss = (float) (salarioBruto * 0.085);     // 8.5/100
 			}
             else{
-                    inss = (salarioBruto * 0.09);     // 9/100
+                    inss = (float) (salarioBruto * 0.09);     // 9/100
 				}
             
             // desconto ir
@@ -54,24 +69,24 @@ public class salario{
             }
             else{
                 if((salarioBruto > 500 ) && (salarioBruto <= 1000)){
-                    ir = (salarioBruto * 0.05); // 5/100
+                    ir = (float) (salarioBruto * 0.05); // 5/100
                 }
                 else {
-                    ir = (salarioBruto * 0.01);  //
+                    ir = (float) (salarioBruto * 0.01);  //
                 }
             }
-			}
 
             salarioLiquido = salarioBruto - inss - ir;
             System.out.println("O Salario Liquido e: " + salarioLiquido);
             //JOptionPane.showMessageDialog(null,"O Salario Liquido e: " + salarioLiquido);
 		}
-
-		//captura erros
+    }
+}
+		/*captura erros
 		catch(IOException e){
 			System.out.println("Erro na entrada de dados" );
 		}
 		catch(NumberFormatException e){
-			System.out.println("Erro na convers�o. Digite n�meros" );
-		}	
-	}
+			System.out.println("Erro na conversao. Digite numeros" );
+}
+		*/
