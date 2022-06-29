@@ -2,7 +2,7 @@ package aulanoite;
 
 import java.util.Scanner;
 
-public class Media {
+public class Media { 
 
 	public static void main(String[] args) {
 		String nome = "";
@@ -13,7 +13,7 @@ public class Media {
 		imprimir("Digite seu nome: ");
 		Scanner ler = new Scanner(System.in);
 		nome = ler.nextLine();
-		//imprimir("Seu nome é " + nome);
+		//imprimir("Seu nome Ã© " + nome);
 		
 		imprimir("Digite a nota 1: ");
 		Scanner n1 = new Scanner(System.in);
@@ -29,14 +29,14 @@ public class Media {
 		
 		//calculo e resultado
 		media = (nota1 + nota2 + nota3)/3;
-		System.out.println("A média do aluno " + nome + "é" + media);
-		//nesse caso não usar imprimir por conta da linha, printf só para entrada de dados
+		System.out.println("A mÃ©dia do aluno " + nome + "Ã©" + media);
+		//nesse caso nÃ£o usar imprimir por conta da linha, printf sÃ³ para entrada de dados
 		
 		if (media >= 7.0){
 			System.out.println("Aprovado");
 		}else{
 			if (media >= 5.0){
-				System.out.println("Recuperação");
+				System.out.println("RecuperaÃ§Ã£o");
 			}else{
 				System.out.println("Reprovado");
 			}
