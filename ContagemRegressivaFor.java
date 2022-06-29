@@ -1,10 +1,10 @@
 package aulanoite;
 
-public class ContagemRegressiva {
+public class ContagemRegressivaFor {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Contagem Regressiva para Lançamento: ");
+		System.out.println("Contagem Regressiva para LanÃ§amento: ");
 		
 		for(int i = 10; i >= 0; i--){ 							// de 10 a 0
 			System.out.println(i);
