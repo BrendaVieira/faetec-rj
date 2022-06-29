@@ -1,5 +1,5 @@
 import java.io.*;
-public class Exemplo0207 {
+public class switchcase3 {
 
 	public static void main(String[] args) {
 		
@@ -7,7 +7,7 @@ public class Exemplo0207 {
 		int x = 0;
 		DataInputStream dado;
 		try{
-			System.out.println("Digite um número");
+			System.out.println("Digite um nÃºmero");
 			dado = new DataInputStream(System.in);
 			s = dado.readLine();
 			x = Integer.parseInt(s);
@@ -22,7 +22,7 @@ public class Exemplo0207 {
 			     System.out.println("dois");
 			     break;
 		    case 3:   
-			     System.out.println("três");
+			     System.out.println("trÃªs");
 			     break;
 		    case 4:    
 			     System.out.println("quatro");
@@ -42,7 +42,7 @@ public class Exemplo0207 {
 		    case 9:   
 		        System.out.println("nove");
 		        break;
-		    default: System.out.println("número desconhecido"); 
+		    default: System.out.println("nÃºmero desconhecido"); 
 		        break;
 		       
 			}
@@ -50,7 +50,7 @@ public class Exemplo0207 {
 		} catch(IOException e) {
 		    System.out.println("erro de entrada de dados");
 		} catch(NumberFormatException e){
-		    System.out.println("erro de conversão.digite um número");			
+		    System.out.println("erro de conversÃ£o.digite um nÃºmero");			
 			}
 		}
 	
