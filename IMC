@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class ImcCorporal {
+
+	public static void main(String[] args) {
+		
+		Scanner leitor = new Scanner(System.in);
+		System.out.print("Digite seu peso: ");
+		double peso = leitor.nextDouble();
+		System.out.print("Digite sua altura: ");
+		double altura = leitor.nextDouble();
+		double imc;
+		imc = peso / (altura * altura);
+		System.out.println("IMC é: " + imc);
+		
+		//exibir o imc
+		System.out.print("Seu Indice de Massa Corporal - IMC é:"+ imc);
+		
+		//testar imc
+		if (imc <19) {
+			System.out.print("\nVocê está muito magro.");
+		}
+		
+		else if ((imc >=19) && (imc <=25)) {
+			System.out.print("\nVocê está com peso saudável.");
+		}
+		
+		else if ((imc >=25) && (imc <=29)) {
+			System.out.print("\nVocê está com sobrepeso,");
+		}
+		
+		else if ((imc >=30) && (imc <=34)) {
+			System.out.print("\nVocê está com obesidade grau 1.");
+		}
+		
+		else if ((imc >=35) && (imc <=39)){
+			System.out.print("\nVocê está com obedidade grau 2.");
+		}	
+
+		else if (imc >=40){
+			System.out.print("\nVocê está com obedidade grau 3.");
+		}		
+			
+		}
+	}
