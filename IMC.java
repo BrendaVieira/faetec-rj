@@ -45,23 +45,23 @@ public class IMC{
 		imc = (peso)/(altura*altura);
 		
 		
-		if (imc <=19){
+		if (imc <19){
 			JOptionPane.showMessageDialog(null, "Muito Magro. IMC: " +imc);
 		}
 		
-		if (imc >=19 && imc <=24){
+		if ((imc >=19) && (imc <=24)){
 			JOptionPane.showMessageDialog(null, "Peso Saudável. IMC: " +imc);
 		}
 		
-		if (imc >=25 && imc <=29){
+		if ((imc >=25) && (imc <=29)){
 			JOptionPane.showMessageDialog(null, "Sobrepeso. IMC: " +imc);
 		}
 		
-		if (imc >=30 && imc <=34){
+		if ((imc >=30) && (imc <=34)){
 			JOptionPane.showMessageDialog(null, "Obesidade Grau 1. IMC: " +imc);
 		}
 		
-		if (imc >=35 && imc <=39){
+		if ((imc >=35) && (imc <=39)){
 			JOptionPane.showMessageDialog(null, "Obesidade Grau 2. IMC: " +imc);
 		}
 		
