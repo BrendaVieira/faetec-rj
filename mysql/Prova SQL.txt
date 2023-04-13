@@ -1,0 +1,31 @@
+CREATE PROCEDURE `filmes_atuacao` (in codigo_ator integer)
+BEGIN
+	SELECT l.titulo
+    FROM filmes l
+    INNER JOIN atuacao a ON l.atuacao_id = a.ator
+    WHERE a.ator = codigo_ator;
+END
+
+CREATE PROCEDURE `filmes_categoria` (in categoria varchar(30))
+BEGIN
+	SELECT l.titulo, c.id
+    FROM filmes l
+    INNER JOIN categorias c ON l.categoria_id = c.id
+    WHERE c.id = categoria;
+END
+
+CREATE PROCEDURE `filmes_duracao` ()
+BEGIN
+	SELECT l.titulo, t.duracao
+    FROM filmes l
+    INNER JOIN tempo t ON l.tempo_id = t.duracao
+    WHERE t.duracao > 60;
+END
+
+CREATE PROCEDURE `filmes_pais` ()
+BEGIN
+	SELECT l.titulo, COUNT (p.id) AS qtd_filmes
+    FROM filmes l
+    INNER JOIN pais p ON l.pais_id = p.id
+    GROUP BY l.titulo;
+END
